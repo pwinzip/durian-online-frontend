@@ -3,4 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-createApp(App).use(store).use(router).mount('#app')
+// SASS Theme
+import './assets/sass/app.scss'
+
+const app = createApp(App)
+    .use(store)
+    .use(router)
+
+app.mount('#app')
