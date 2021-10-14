@@ -6,6 +6,7 @@ import FrontendLayout from "@/layouts/Frontend.vue";
 // Import views
 // Frontend
 import Home from "@/views/Home.vue";
+import Login from "@/views/Login.vue";
 
 // Backend
 
@@ -20,6 +21,11 @@ const routes = [
         component: Home,
       },
     ],
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
   },
   //   {
   //     path: '/',
