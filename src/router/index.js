@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import FrontendLayout from "@/layouts/Frontend.vue";
 
 // Import views
+import ErrorPage from "@/views/ErrorPage.vue";
 // Frontend
 import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
@@ -21,11 +22,33 @@ const routes = [
         component: Home,
       },
     ],
+    meta: {
+      title: "หน้าแรก",
+    },
   },
   {
     path: "/login",
     name: "Login",
     component: Login,
+    meta: {
+      title: "เข้าสู่ระบบ",
+    },
+  },
+
+  {
+    path: "/error-page",
+    name: "error-page",
+    component: ErrorPage,
+    meta: {
+      title: "ไม่พบหน้านี้",
+    },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    component: ErrorPage,
+    meta: {
+      title: "ไม่พบหน้านี้",
+    },
   },
   //   {
   //     path: '/',
