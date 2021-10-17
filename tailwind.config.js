@@ -1,7 +1,10 @@
 const primaryColors = require("@left4code/tw-starter/dist/js/colors");
 
 module.exports = {
-  purge: ["./src/**/*.{php,html,js,jsx,ts,tsx,vue}"],
+  purge: [
+    "./src/**/*.{php,html,js,jsx,ts,tsx,vue}",
+    "./node_modules/@left4code/tw-starter/**/*.js",
+  ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     borderColor: (theme) => ({

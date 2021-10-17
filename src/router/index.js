@@ -3,18 +3,22 @@ import { createRouter, createWebHistory } from "vue-router";
 // Import layouts
 import FrontendLayout from "@/layouts/Frontend.vue";
 
+// Import Admin Layout
+import SideMenuAdmin from "@/layouts/side-menu/MainAdmin.vue";
+
 // Import views
 import ErrorPage from "@/views/ErrorPage.vue";
 // Frontend
 import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
 
-// Backend
+// Admin
+import AdminHome from "@/views/backend/AdminHomePage.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "Main",
     component: FrontendLayout,
     children: [
       {
@@ -33,6 +37,36 @@ const routes = [
     meta: {
       title: "เข้าสู่ระบบ",
     },
+  },
+  {
+    path: "/admin/",
+    component: SideMenuAdmin,
+    children: [
+      {
+        path: "",
+        name: "admin-home",
+        component: AdminHome,
+        meta: {
+          title: "ผู้ดูแลระบบ",
+        },
+      },
+      {
+        path: "manage",
+        name: "admin-manage",
+        component: AdminHome,
+        meta: {
+          title: "จัดการข้อมูล",
+        },
+      },
+      {
+        path: "approve",
+        name: "admin-approve-transfer",
+        component: AdminHome,
+        meta: {
+          title: "ตรวจสอบการโอนเงิน",
+        },
+      },
+    ],
   },
 
   {

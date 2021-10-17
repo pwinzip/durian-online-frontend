@@ -7,8 +7,10 @@
         <h1 class="my-4 text-5xl font-bold leading-tight">Hub of Durian Online Martket Platform</h1>
         <p class="mb-8 text-2xl leading-normal">New Generation of Selling Durian in Digital Platform</p>
         <button
-          class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg lg:mx-0 hover:underline focus:outline-none focus:shadow-outline hover:scale-105"
-        >Subscribe</button>
+          class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg  lg:mx-0 hover:underline focus:outline-none focus:shadow-outline hover:scale-105"
+        >
+          Subscribe
+        </button>
       </div>
       <!--Right Col-->
       <div class="w-full py-6 text-center md:w-3/5">
@@ -58,16 +60,18 @@
               <p class="w-full px-6 text-xs text-gray-600 md:text-sm">xGETTING STARTED</p>
               <div class="w-full px-6 text-xl font-bold text-gray-800">Lorem ipsum dolor sit amet.</div>
               <p class="px-6 mb-5 text-base text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit
+                amet ligula.
               </p>
             </a>
           </div>
           <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
             <div class="flex items-center justify-start">
               <button
-                class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
-              >Action</button>
+                class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg  lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
+              >
+                Action
+              </button>
             </div>
           </div>
         </div>
@@ -77,16 +81,18 @@
               <p class="w-full px-6 text-xs text-gray-600 md:text-sm">xGETTING STARTED</p>
               <div class="w-full px-6 text-xl font-bold text-gray-800">Lorem ipsum dolor sit amet.</div>
               <p class="px-6 mb-5 text-base text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit
+                amet ligula.
               </p>
             </a>
           </div>
           <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
             <div class="flex items-center justify-center">
               <button
-                class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
-              >Action</button>
+                class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg  lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
+              >
+                Action
+              </button>
             </div>
           </div>
         </div>
@@ -96,16 +102,18 @@
               <p class="w-full px-6 text-xs text-gray-600 md:text-sm">xGETTING STARTED</p>
               <div class="w-full px-6 text-xl font-bold text-gray-800">Lorem ipsum dolor sit amet.</div>
               <p class="px-6 mb-5 text-base text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit
+                amet ligula.
               </p>
             </a>
           </div>
           <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
             <div class="flex items-center justify-end">
               <button
-                class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
-              >Action</button>
+                class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg  lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105"
+              >
+                Action
+              </button>
             </div>
           </div>
         </div>
@@ -116,6 +124,6 @@
 
 <script>
 export default {
-  name: "Home"
-};
+  name: 'Home'
+}
 </script>
