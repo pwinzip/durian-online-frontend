@@ -1,25 +1,37 @@
 const state = () => {
   return {
     menu: [
-      {
-        icon: "HomeIcon",
-        pageName: "sell-home",
-        title: "Sell Home",
-      },
+      // {
+      //   icon: "HomeIcon",
+      //   pageName: "buy-home",
+      //   title: "หน้าหลัก",
+      //   subMenu: [
+      //     {
+      //       icon: "",
+      //       pageName: "buy-durian-1",
+      //       title: "หมอนทอง",
+      //     },
+      //   ],
+      // },
       {
         icon: "BoxIcon",
         pageName: "buy-offer",
-        title: "Buy Offer",
+        title: "รับซื้อทุเรียน",
       },
       {
         icon: "CreditCardIcon",
-        pageName: "buy-bid",
-        title: "Buy Bid",
+        pageName: "buy-offer-status",
+        title: "สถานะการรับซื้อ",
       },
+      // {
+      //   icon: "CreditCardIcon",
+      //   pageName: "buy-bid",
+      //   title: "รายการประมูลซื้อ",
+      // },
       {
         icon: "InboxIcon",
-        pageName: "sell-transfer",
-        title: "Sell Transfer",
+        pageName: "buy-transfer",
+        title: "โอนเงิน",
       },
     ],
   };

@@ -17,6 +17,16 @@ module.exports = {
       black: "black",
       current: "current",
       transparent: "transparent",
+      // dark: {
+      //   1: "#293145",
+      //   2: "#232a3b",
+      //   3: "#313a55",
+      //   4: "#1e2533",
+      //   5: "#3f4865",
+      //   6: "#2b3348",
+      //   7: "#181f29",
+      //   8: "#7C001F",
+      // },
       theme: {
         1: "#1C3FAA",
         2: "#F1F5F8",
@@ -48,6 +58,7 @@ module.exports = {
         28: "#BBC8FD",
         29: "#284EB2",
         30: "#98AFF5",
+        31: "#40B682",
       },
     },
     extend: {

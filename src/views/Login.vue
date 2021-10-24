@@ -148,9 +148,9 @@ export default defineComponent({
               if (userRole == '0') {
                 this.$router.push('/admin')
               } else if (userRole == '1') {
-                this.$router.push('/seller-main')
+                this.$router.push('/seller')
               } else if (userRole == '2') {
-                this.$router.push('/buyer-main')
+                this.$router.push('/buyer')
               } else {
                 this.$router.push('error-page')
               }

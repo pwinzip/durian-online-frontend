@@ -7,19 +7,21 @@
       <ChevronRightIcon class="breadcrumb__icon" />
       <a href="" class="breadcrumb--active">{{ `${title}` }}</a>
     </div>
+    <!-- END: Account Menu -->
 
     <!-- BEGIN: Account Menu -->
+
     <div class="w-8 h-8 intro-x dropdown">
       <div
         class="w-8 h-8 overflow-hidden rounded-full shadow-lg dropdown-toggle image-fit zoom-in"
         role="button"
         aria-expanded="false">
-        <img alt="Icewall Tailwind HTML Admin Template" :src="require(`@/assets/images/profile-1.jpg`)" />
+        <img alt="Online" :src="require(`@/assets/images/profile-1.jpg`)" />
       </div>
       <div class="w-56 dropdown-menu">
         <div class="text-white dropdown-menu__content box bg-theme-26 dark:bg-dark-6">
           <div class="p-4 border-b border-theme-27 dark:border-dark-3">
-            <div class="font-medium">Naphat Keawpibal</div>
+            <div class="font-medium">{{ username }}</div>
             <div class="text-xs text-theme-28 mt-0.5 dark:text-gray-600">Role</div>
           </div>
           <div class="p-2">
@@ -34,18 +36,22 @@
               <LockIcon class="w-4 h-4 mr-2" /> Reset Password
             </router-link>
           </div>
-          <div class="p-2 border-t border-theme-27 dark:border-dark-3">
-            <router-link
-              to=""
-              href=""
-              class="flex items-center p-2 transition duration-300 ease-in-out rounded-md  hover:bg-theme-1 dark:hover:bg-dark-3">
+          <!-- <div class="p-2 border-t border-theme-27 dark:border-dark-3">
+            <button
+              @click="onclickLogout"
+              class="flex items-center w-full p-2 transition duration-300 ease-in-out rounded-md hover:bg-theme-1 dark:hover:bg-dark-3">
               <ToggleRightIcon class="w-4 h-4 mr-2" /> Logout
-            </router-link>
-          </div>
+            </button>
+            
+          </div> -->
         </div>
       </div>
     </div>
-    <!-- END: Account Menu -->
+    <div class="items-center ml-3">
+      <button @click="onclickLogout" class="w-32 mr-2 btn btn-elevated-rounded-danger">
+        <LockIcon class="w-4 h-4 mr-2" />ออกจากระบบ
+      </button>
+    </div>
 
     <!-- END: Breadcrumb -->
     <!-- BEGIN: Search -->
@@ -186,66 +192,6 @@
       </div>
     </div> -->
     <!-- END: Notifications -->
-    <!-- BEGIN: Account Menu -->
-    <!-- <div class="w-8 h-8 intro-x dropdown">
-      <div
-        class="w-8 h-8 overflow-hidden rounded-full shadow-lg dropdown-toggle image-fit zoom-in"
-        role="button"
-        aria-expanded="false"
-      >
-        <img
-          alt="Icewall Tailwind HTML Admin Template"
-          :src="require(`@/assets/images/${$f()[9].photos[0]}`)"
-        />
-      </div>
-      <div class="w-56 dropdown-menu">
-        <div
-          class="text-white dropdown-menu__content box bg-theme-26 dark:bg-dark-6"
-        >
-          <div class="p-4 border-b border-theme-27 dark:border-dark-3">
-            <div class="font-medium">{{ $f()[0].users[0].name }}</div>
-            <div class="text-xs text-theme-28 mt-0.5 dark:text-gray-600">
-              {{ $f()[0].jobs[0] }}
-            </div>
-          </div>
-          <div class="p-2">
-            <a
-              href=""
-              class="flex items-center block p-2 transition duration-300 ease-in-out rounded-md hover:bg-theme-1 dark:hover:bg-dark-3"
-            >
-              <UserIcon class="w-4 h-4 mr-2" /> Profile
-            </a>
-            <a
-              href=""
-              class="flex items-center block p-2 transition duration-300 ease-in-out rounded-md hover:bg-theme-1 dark:hover:bg-dark-3"
-            >
-              <EditIcon class="w-4 h-4 mr-2" /> Add Account
-            </a>
-            <a
-              href=""
-              class="flex items-center block p-2 transition duration-300 ease-in-out rounded-md hover:bg-theme-1 dark:hover:bg-dark-3"
-            >
-              <LockIcon class="w-4 h-4 mr-2" /> Reset Password
-            </a>
-            <a
-              href=""
-              class="flex items-center block p-2 transition duration-300 ease-in-out rounded-md hover:bg-theme-1 dark:hover:bg-dark-3"
-            >
-              <HelpCircleIcon class="w-4 h-4 mr-2" /> Help
-            </a>
-          </div>
-          <div class="p-2 border-t border-theme-27 dark:border-dark-3">
-            <a
-              href=""
-              class="flex items-center block p-2 transition duration-300 ease-in-out rounded-md hover:bg-theme-1 dark:hover:bg-dark-3"
-            >
-              <ToggleRightIcon class="w-4 h-4 mr-2" /> Logout
-            </a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- END: Account Menu -->
   </div>
   <!-- END: Top Bar -->
 </template>
@@ -255,6 +201,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  data() {
+    let userdata = JSON.parse(localStorage.getItem('user'))
+    return {
+      username: userdata['user']['fullname']
+    }
+  },
   props: {
     title: String
   },
@@ -271,6 +223,14 @@ export default defineComponent({
     //   showSearchDropdown,
     //   hideSearchDropdown
     // }
+  },
+  methods: {
+    onclickLogout() {
+      localStorage.removeItem('user')
+      //   this.$router.push('/login')
+      this.$router.push({ name: 'Login' })
+      //   window.location.href = '/login'
+    }
   }
 })
 </script>
