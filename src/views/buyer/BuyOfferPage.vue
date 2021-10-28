@@ -10,7 +10,7 @@
       </div> -->
     </div>
 
-    <div class="px-5 pt-5 mt-5 intro-y box">
+    <div class="px-5 pt-2 mt-4 intro-y box">
       <div class="flex-col justify-center nav nav-tabs sm:flex-row lg:justify-start" role="tablist">
         <a
           id="durian1-tab"
@@ -53,7 +53,7 @@
           aria-selected="false">
           พวงมณี
         </a>
-        <div class="flex w-full mt-4 mb-2 ml-auto mr-2 sm:w-auto sm:mt-0">
+        <div class="flex w-full mt-2 mb-2 ml-4 mr-2 sm:w-auto sm:mt-0">
           <button class="shadow-md btn btn-primary">ดูทุเรียนยะลา</button>
         </div>
       </div>
@@ -62,172 +62,92 @@
     <div class="mt-5 intro-y tab-content">
       <!-- หมอนทอง -->
       <div id="durian1" class="tab-pane active" role="tabpanel" aria-labelledby="durian1-tab">
-        <div
-          class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-6 focus:outline-none">
-          หนามแดง
-        </div>
-        <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-          <div class="overflow-auto intro-y lg:overflow-visible">
-            <table class="table mt-2 table-report">
-              <thead>
-                <tr>
-                  <th class="text-center whitespace-nowrap">เกรด</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนในตลาด</th>
-                  <th class="text-center whitespace-nowrap">ราคาซื้อ</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนที่ต้องการซื้อ</th>
-                  <th class="text-center whitespace-nowrap">ราคาที่ต้องการซื้อ</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">AB</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_1_red.offeramount[0]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_red.offerprice[0]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">C</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_1_red.offeramount[1]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_1_red.offerprice[1]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="text-center intro-x">
-                  <td class="w-40">D</td>
-                  <td class="w-40">10,000</td>
-                  <td class="w-40">103</td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_1_red.offeramount[2]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_1_red.offerprice[2]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ตกไซต์</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_red.offeramount[3]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_red.offerprice[3]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ห้องเย็น</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_red.offerprice[4]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_red.offerprice[4]" class="w-full form-control" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="grid grid-cols-12 gap-6">
+          <!-- หนามแดง -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-6 focus:outline-none">
+              หนามแดง
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead>
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(0, 5)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div
-          class="flex items-center justify-between p-4 mt-5 mb-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-9 focus:outline-none">
-          หนามเขียว
-        </div>
-        <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-          <div class="overflow-auto intro-y lg:overflow-visible">
-            <table class="table mt-2 table-report">
-              <thead class="">
-                <tr>
-                  <th class="text-center whitespace-nowrap">เกรด</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนในตลาด</th>
-                  <th class="text-center whitespace-nowrap">ราคาซื้อ</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนที่ต้องการซื้อ</th>
-                  <th class="text-center whitespace-nowrap">ราคาที่ต้องการซื้อ</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">AB</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40 text-center">
-                    <input
-                      type="number"
-                      v-model="durian_1_green.offeramount[0]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_green.offerprice[0]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">C</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_1_green.offeramount[1]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_green.offerprice[1]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">D</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_1_green.offeramount[2]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_green.offerprice[2]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ตกไซต์</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_1_green.offeramount[3]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_green.offerprice[3]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ห้องเย็น</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_1_green.offeramount[4]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_1_green.offerprice[4]" class="w-full form-control" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- หนามเขียว -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-9 focus:outline-none">
+              หนามเขียว
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead class="">
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(5, 10)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex w-full mt-4 sm:w-auto sm:mt-0">
@@ -236,178 +156,95 @@
           </button>
         </div>
       </div>
+
       <!-- ชะนี -->
       <div id="durian2" class="tab-pane" role="tabpanel" aria-labelledby="durian2-tab">
-        <div
-          class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-6 focus:outline-none">
-          หนามแดง
-        </div>
-        <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-          <div class="overflow-auto intro-y lg:overflow-visible">
-            <table class="table mt-2 table-report">
-              <thead class="">
-                <tr>
-                  <th class="text-center whitespace-nowrap">เกรด</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนในตลาด</th>
-                  <th class="text-center whitespace-nowrap">ราคาซื้อ</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนที่ต้องการซื้อ</th>
-                  <th class="text-center whitespace-nowrap">ราคาที่ต้องการซื้อ</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">AB</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_2_red.offeramount[0]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_red.offerprice[0]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">C</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_2_red.offeramount[1]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_2_red.offerprice[1]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="text-center intro-x">
-                  <td class="w-40">D</td>
-                  <td class="w-40">10,000</td>
-                  <td class="w-40">103</td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_2_red.offeramount[2]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40 text-center">
-                    <input type="number" v-model="durian_2_red.offerprice[2]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ตกไซต์</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_red.offeramount[3]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_red.offerprice[3]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ห้องเย็น</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_red.offeramount[4]" class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_red.offerprice[4]" class="w-full form-control" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="grid grid-cols-12 gap-6">
+          <!-- หนามแดง -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-6 focus:outline-none">
+              หนามแดง
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead>
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(10, 15)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div
-          class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-9 focus:outline-none">
-          หนามเขียว
-        </div>
-        <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-          <div class="overflow-auto intro-y lg:overflow-visible">
-            <table class="table mt-2 table-report">
-              <thead class="">
-                <tr>
-                  <th class="text-center whitespace-nowrap">เกรด</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนในตลาด</th>
-                  <th class="text-center whitespace-nowrap">ราคาซื้อ</th>
-                  <th class="text-center whitespace-nowrap">จำนวนทุเรียนที่ต้องการซื้อ</th>
-                  <th class="text-center whitespace-nowrap">ราคาที่ต้องการซื้อ</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">AB</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40 text-center">
-                    <input
-                      type="number"
-                      v-model="durian_2_green.offeramount[0]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_green.offerprice[0]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">C</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_2_green.offeramount[1]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_green.offerprice[1]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">D</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_2_green.offeramount[2]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_green.offerprice[2]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ตกไซต์</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_2_green.offeramount[3]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input type="number" v-model="durian_2_green.offerprice[3]" class="w-full form-control" />
-                  </td>
-                </tr>
-                <tr class="intro-x">
-                  <td class="w-40 text-center">ห้องเย็น</td>
-                  <td class="w-40 text-center">10,000</td>
-                  <td class="w-40 text-center">103</td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      v-model="durian_2_green.offeramount[4]"
-                      class="w-full form-control" />
-                  </td>
-                  <td class="w-40">
-                    <input
-                      type="number"
-                      pattern="[0-9]+([\.,][0-9]+)?"
-                      v-model="durian_2_green.offerprice[4]"
-                      class="w-full form-control" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- หนามเขียว -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-9 focus:outline-none">
+              หนามเขียว
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead class="">
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(15, 20)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex w-full mt-4 sm:w-auto sm:mt-0">
@@ -416,231 +253,198 @@
           </button>
         </div>
       </div>
-      <div id="durian3" class="tab-pane" role="tabpanel" aria-labelledby="durian3-tab">ก้าวยาว</div>
-      <div id="durian4" class="tab-pane" role="tabpanel" aria-labelledby="durian4-tab">พวงมณี</div>
+
+      <div id="durian3" class="tab-pane" role="tabpanel" aria-labelledby="durian3-tab">
+        <div class="grid grid-cols-12 gap-6">
+          <!-- หนามแดง -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-6 focus:outline-none">
+              หนามแดง
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead>
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(20, 25)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- หนามเขียว -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-9 focus:outline-none">
+              หนามเขียว
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead class="">
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(25, 30)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-full mt-4 sm:w-auto sm:mt-0">
+          <button @click="onclickOfferBuy(3)" class="mx-auto shadow-md btn btn-primary">
+            รับซื้อทุเรียนก้านยาว
+          </button>
+        </div>
+      </div>
+      <div id="durian4" class="tab-pane" role="tabpanel" aria-labelledby="durian4-tab">
+        <div class="grid grid-cols-12 gap-6">
+          <!-- หนามแดง -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-6 focus:outline-none">
+              หนามแดง
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead>
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(30, 35)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- หนามเขียว -->
+          <div class="col-span-12 lg:col-span-6-6 2xl:col-span-6">
+            <div
+              class="flex items-center justify-between p-4 mt-5 text-sm font-semibold text-white rounded-lg shadow-md  bg-theme-9 focus:outline-none">
+              หนามเขียว
+            </div>
+            <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+              <div class="overflow-auto intro-y lg:overflow-visible">
+                <table class="table mt-2 table-report">
+                  <thead class="">
+                    <tr>
+                      <th class="text-center">เกรด</th>
+                      <th class="text-center">จำนวนทุเรียนในตลาด</th>
+                      <th class="text-center">ราคาซื้อ</th>
+                      <th class="text-center">จำนวนทุเรียนที่ต้องการซื้อ</th>
+                      <th class="text-center">ราคาที่ต้องการซื้อ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(offer, index) in bestPrice.slice(35, 40)" :key="index" class="intro-x">
+                      <td class="w-40 text-center">{{ printGrade(offer.val.grade_id) }}</td>
+                      <td
+                        class="text-center text-primary-3"
+                        v-if="!offer.val.sum_amount && !offer.val.max_price"
+                        colspan="2">
+                        ไม่มีข้อมูลการรับซื้อทุเรียน
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.sum_amount">
+                        {{ offer.val.sum_amount }}
+                      </td>
+                      <td class="w-40 text-center" v-if="offer.val.max_price">{{ offer.val.max_price }}</td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.amount" class="w-full form-control" />
+                      </td>
+                      <td class="w-40 text-center">
+                        <input type="number" v-model="offer.price" class="w-full form-control" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-full mt-4 sm:w-auto sm:mt-0">
+          <button @click="onclickOfferBuy(4)" class="mx-auto shadow-md btn btn-primary">
+            รับซื้อทุเรียนพวงมณี
+          </button>
+        </div>
+      </div>
     </div>
-    <!-- BEGIN: HTML Table Data -->
-    <!-- <div class="p-5 mt-5 intro-y box">
-      <div class="flex flex-col pb-3 sm:flex-row sm:items-end xl:items-start">
-        <div class="items-center sm:flex sm:mr-4">
-          <h2 class="mr-auto text-lg font-medium">ประเภทหนามแดง</h2>
-        </div>
-      </div>
-      <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-        <div class="w-full overflow-x-auto">
-          <table class="w-full whitespace-no-wrap">
-            <thead class="bg-theme-1">
-              <tr
-                class="font-semibold tracking-wide text-left text-gray-200 uppercase dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                <th class="px-4 py-3 text-center">พันธุ์ทุเรียน</th>
-                <th class="px-4 py-3 text-center">จำนวนที่มีในตลาด (กิโลกรัม)</th>
-                <th class="px-4 py-3 text-center">ราคาซื้อ (ต่อกิโลกรัม)</th>
-                <th class="px-4 py-3 text-center">จำนวนที่รับซื้อ (กิโลกรัม)</th>
-                <th class="px-4 py-3 text-center">ราคาที่รับซื้อ (ต่อกิโลกรัม)</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">หมอนทอง</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_greendurian_1" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_greendurian_1" />
-                  </div>
-                </td>
-              </tr>
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">ชะนี</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_greendurian_2" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_greendurian_2" />
-                  </div>
-                </td>
-              </tr>
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">ก้าวยาว</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_greendurian_3" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_greendurian_3" />
-                  </div>
-                </td>
-              </tr>
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">พวงมณี</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_greendurian_4" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_greendurian_4" />
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div> -->
-    <!-- END: HTML Table Data -->
-    <!-- BEGIN: HTML Table Data -->
-    <!-- <div class="p-5 mt-5 intro-y box">
-      <div class="flex flex-col pb-3 sm:flex-row sm:items-end xl:items-start">
-        <div class="items-center sm:flex sm:mr-4">
-          <h2 class="mr-auto text-lg font-medium">ประเภทหนามเขียว</h2>
-        </div>
-      </div>
-      <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
-        <div class="w-full overflow-x-auto">
-          <table class="w-full whitespace-no-wrap">
-            <thead class="bg-theme-1">
-              <tr
-                class="font-semibold tracking-wide text-left text-gray-200 uppercase dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                <th class="px-4 py-3 text-center">พันธุ์ทุเรียน</th>
-                <th class="px-4 py-3 text-center">จำนวนที่มีในตลาด (กิโลกรัม)</th>
-                <th class="px-4 py-3 text-center">ราคาซื้อ (ต่อกิโลกรัม)</th>
-                <th class="px-4 py-3 text-center">จำนวนที่รับซื้อ (กิโลกรัม)</th>
-                <th class="px-4 py-3 text-center">ราคาที่รับซื้อ (ต่อกิโลกรัม)</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">หมอนทอง</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_reddurian_1" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_reddurian_1" />
-                  </div>
-                </td>
-              </tr>
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">ชะนี</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_reddurian_2" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_reddurian_2" />
-                  </div>
-                </td>
-              </tr>
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">ก้าวยาว</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_reddurian_3" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_reddurian_3" />
-                  </div>
-                </td>
-              </tr>
-              <tr class="text-gray-700 dark:text-gray-400">
-                <td class="px-4 py-3">
-                  <div><p class="font-semibold">พวงมณี</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">10,000</p></div>
-                </td>
-                <td class="px-4 py-3 text-center">
-                  <div><p class="">102</p></div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_amount_reddurian_4" />
-                  </div>
-                </td>
-                <td class="px-4 py-3">
-                  <div>
-                    <input type="text" class="w-full form-control" name="buy_price_reddurian_4" />
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div> -->
-    <!-- END: HTML Table Data -->
   </div>
 </template>
 
@@ -650,164 +454,94 @@ import { defineComponent } from 'vue'
 import http from '@/services/BackendService'
 
 export default defineComponent({
-  mounted() {},
+  mounted() {
+    http
+      .get('bestofferprice/1') // 1 get normal location
+      .then(res => {
+        let bestPriceResponse = res.data
+        bestPriceResponse.forEach(el => {
+          this.bestPrice.push({
+            amount: '',
+            price: '',
+            val: el
+          })
+        })
+        console.log(this.bestPrice)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  },
 
   data() {
     return {
-      // หมอนทอง
-      durian_1_red: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      },
-      // หมอนทอง
-      durian_1_green: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      },
-      // ชะนี
-      durian_2_red: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      },
-      // ชะนี
-      durian_2_green: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      },
-      // ก้านยาว
-      durian_3_red: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      },
-      // ก้านยาว
-      durian_3_green: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      },
-      // พวงมณี
-      durian_4_red: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      },
-      // พวงมณี
-      durian_4_green: {
-        grade: ['AB', 'C', 'D', 'ตกไซต์', 'ห้องเย็น'],
-        amount: ['', '', '', '', ''],
-        price: ['', '', '', '', ''],
-        offeramount: ['', '', '', '', ''],
-        offerprice: ['', '', '', '', '']
-      }
+      bestPrice: []
     }
   },
   methods: {
+    printGrade(id) {
+      let txt = ''
+      if (id == 1) txt = 'AB'
+      else if (id == 2) txt = 'C'
+      else if (id == 3) txt = 'D'
+      else if (id == 4) txt = 'ตกไซต์'
+      else txt = 'ห้องเย็น'
+      return txt
+    },
     onclickOfferBuy(param) {
       let insertdurian = []
-      // Red, AB
-      for (let i = 0; i < 5; i++) {
-        if (this.durian_1_red.offeramount[i] != '' && this.durian_1_red.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 1,
-            torn: 1,
-            grade: i + 1,
-            offeramount: this.durian_1_red.offeramount[i],
-            offerprice: this.durian_1_red.offerprice[i],
-            location: 1
-          })
-        }
-        if (this.durian_1_green.offeramount[i] != '' && this.durian_1_green.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 1,
-            torn: 2,
-            grade: i + 1,
-            offeramount: this.durian_1_green.offeramount[i],
-            offerprice: this.durian_1_green.offerprice[i],
-            location: 1
-          })
-        }
-
-        if (this.durian_2_red.offeramount[i] != '' && this.durian_2_red.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 2,
-            torn: 1,
-            grade: i + 1,
-            offeramount: this.durian_2_red.offeramount[i],
-            offerprice: this.durian_2_red.offerprice[i],
-            location: 1
-          })
-        }
-        if (this.durian_2_green.offeramount[i] != '' && this.durian_2_green.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 2,
-            torn: 2,
-            grade: i + 1,
-            offeramount: this.durian_2_green.offeramount[i],
-            offerprice: this.durian_2_green.offerprice[i],
-            location: 1
-          })
-        }
-
-        if (this.durian_3_red.offeramount[i] != '' && this.durian_3_red.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 3,
-            torn: 1,
-            grade: i + 1,
-            offeramount: this.durian_3_red.offeramount[i],
-            offerprice: this.durian_3_red.offerprice[i],
-            location: 1
-          })
-        }
-        if (this.durian_3_green.offeramount[i] != '' && this.durian_3_green.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 3,
-            torn: 2,
-            grade: i + 1,
-            offeramount: this.durian_3_green.offeramount[i],
-            offerprice: this.durian_3_green.offerprice[i],
-            location: 1
-          })
-        }
-
-        if (this.durian_4_red.offeramount[i] != '' && this.durian_4_red.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 4,
-            torn: 1,
-            grade: i + 1,
-            offeramount: this.durian_4_red.offeramount[i],
-            offerprice: this.durian_4_red.offerprice[i],
-            location: 1
-          })
-        }
-        if (this.durian_4_green.offeramount[i] != '' && this.durian_4_green.offerprice[i] != '') {
-          insertdurian.push({
-            gene: 4,
-            torn: 2,
-            grade: i + 1,
-            offeramount: this.durian_4_green.offeramount[i],
-            offerprice: this.durian_4_green.offerprice[i],
-            location: 1
-          })
-        }
+      if (param == 1) {
+        this.bestPrice.slice(0, 10).forEach(el => {
+          if (el.amount != '' && el.price != '') {
+            insertdurian.push({
+              gene: el.val.gene_id,
+              torn: el.val.torn_id,
+              grade: el.val.grade_id,
+              location: el.val.location_id,
+              offeramount: el.amount,
+              offerprice: el.price
+            })
+          }
+        })
+      } else if (param == 2) {
+        this.bestPrice.slice(10, 20).forEach(el => {
+          if (el.amount != '' && el.price != '') {
+            insertdurian.push({
+              gene: el.val.gene_id,
+              torn: el.val.torn_id,
+              grade: el.val.grade_id,
+              location: el.val.location_id,
+              offeramount: el.amount,
+              offerprice: el.price
+            })
+          }
+        })
+      } else if (param == 3) {
+        this.bestPrice.slice(20, 30).forEach(el => {
+          if (el.amount != '' && el.price != '') {
+            insertdurian.push({
+              gene: el.val.gene_id,
+              torn: el.val.torn_id,
+              grade: el.val.grade_id,
+              location: el.val.location_id,
+              offeramount: el.amount,
+              offerprice: el.price
+            })
+          }
+        })
+      } else if (param == 4) {
+        this.bestPrice.slice(30, 40).forEach(el => {
+          if (el.amount != '' && el.price != '') {
+            insertdurian.push({
+              gene: el.val.gene_id,
+              torn: el.val.torn_id,
+              grade: el.val.grade_id,
+              location: el.val.location_id,
+              offeramount: el.amount,
+              offerprice: el.price
+            })
+          }
+        })
       }
 
       let submitdata = {
@@ -815,11 +549,31 @@ export default defineComponent({
         buydata: insertdurian
       }
 
-      console.log(param)
-      console.log(JSON.parse(localStorage.getItem('user'))['user'].id)
-      console.log(submitdata)
       http.post('offer-buy', submitdata).then(res => {
         console.log(res.data)
+        // this.bestPrice.forEach(el => {
+        //   el.amount = ''
+        //   el.price = ''
+        // })
+        // notify something
+        const Toast = this.$swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 1000,
+          timerProgressBar: true,
+          didOpen: toast => {
+            toast.addEventListener('mouseenter', this.$swal.stopTimer)
+            toast.addEventListener('mouseleave', this.$swal.resumeTimer)
+          }
+        })
+
+        Toast.fire({
+          icon: 'success',
+          title: 'กำหนดราคารับซื้อเรียบร้อย'
+        })
+
+        this.$forceUpdate()
 
         // redirect to sumary of own offer
       })

@@ -13,12 +13,16 @@ import SideMenuSell from "@/layouts/side-menu/SideSell.vue";
 import ErrorPage from "@/views/ErrorPage.vue";
 import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
+import Register from "@/views/Register.vue";
 
 // Backend
 import AdminHome from "@/views/backend/AdminHomePage.vue";
 import BuyOffer from "@/views/buyer/BuyOfferPage.vue";
+import BuyOfferStatus from "@/views/buyer/BuyOfferStatus.vue";
+
 import SellBid from "@/views/seller/SellBidPage.vue";
 import SellBidDetail from "@/views/seller/SellBidDetail.vue";
+import SellBidStatus from "@/views/seller/SellBidStatus.vue";
 
 const routes = [
   // Frontend Route
@@ -42,6 +46,14 @@ const routes = [
     component: Login,
     meta: {
       title: "เข้าสู่ระบบ",
+    },
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: Register,
+    meta: {
+      title: "ลงทะเบียนผู้ใช้งาน",
     },
   },
   // Admin Route
@@ -97,7 +109,7 @@ const routes = [
       //   },
       // },
       {
-        path: "offer",
+        path: "",
         name: "buy-offer",
         component: BuyOffer,
         meta: {
@@ -107,7 +119,7 @@ const routes = [
       {
         path: "offerstatus",
         name: "buy-offer-status",
-        component: BuyOffer, // change view
+        component: BuyOfferStatus, // change view
         meta: {
           title: "สถานะรับซื้อทุเรียน",
         },
@@ -160,7 +172,7 @@ const routes = [
       //   },
       // },
       {
-        path: "bid",
+        path: "",
         name: "sell-bid",
         component: SellBid,
         meta: {
@@ -179,7 +191,7 @@ const routes = [
       {
         path: "bidstatus",
         name: "sell-bid-status",
-        component: SellBid,
+        component: SellBidStatus,
         meta: {
           title: "สถานะประมูลขายทุเรียน",
         },

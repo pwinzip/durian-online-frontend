@@ -10,12 +10,17 @@ import "./libs";
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 
+// moment
+import moment from "moment";
+moment.locale("th");
+
 // SASS Theme
 import "./assets/sass/app.scss";
 
 const app = createApp(App)
   .use(store)
   .use(router)
+  .use(moment)
   .use(VueSweetalert2);
 
 globalComponents(app);

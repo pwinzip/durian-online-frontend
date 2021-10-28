@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col items-center mt-8 intro-y sm:flex-row">
-      <h2 class="mr-auto text-lg font-medium text-center">ราคาซื้อขายทุเรียนตลาดออนไลน์กลาง Detail</h2>
+      <h2 class="mr-auto text-lg font-medium text-center">ราคาซื้อขายทุเรียนตลาดออนไลน์กลาง</h2>
     </div>
     <div>
       <h2 class="text-lg font-medium text-center">
@@ -19,32 +19,29 @@
             <thead class="bg-theme-21 dark:bg-dark-3 dark:text-gray-200">
               <tr>
                 <td>เกรด</td>
-                <td>จำนวนที่ล้งรับซื้อ</td>
-                <td>ราคาที่ล้งรับซื้อ</td>
+                <td>จำนวนที่ล้งรับซื้อ (kg)</td>
+                <td>ราคาที่ล้งรับซื้อ (บาท)</td>
                 <td>จำนวนที่ประมูลขาย</td>
               </tr>
             </thead>
             <tbody class="divide-y dark:bg-dark-5">
-              <tr>
+              <tr class="">
                 <td rowspan="5">
                   <div>{{ grade_txt }}</div>
-                  <!-- <div v-if="grade_id == 2">เกรด C</div>
-                  <div v-if="grade_id == 3">เกรด D</div>
-                  <div v-if="grade_id == 4">เกรด ตกไซต์</div>
-                  <div v-if="grade_id == 5">เกรด ห้องเย็น</div> -->
                 </td>
               </tr>
-              <tr v-if="offers.length == 0" class="text-center text-primary-3">
+              <tr v-show="offers.length == 0" class="text-center text-primary-3">
                 <td colspan="3">ไม่มีข้อมูลรับซื้อ</td>
               </tr>
-              <tr v-for="offer in offers" :key="offer.id" class="text-gray-700 dark:text-gray-400">
-                <td>{{ offer.offer_remain_amount }}</td>
-                <td>{{ offer.offer_price }}</td>
+              <tr v-for="(offer, index) in offers" :key="index" class="text-gray-700 dark:text-gray-400">
+                <td>{{ offer.val.sum_amount }}</td>
+                <td>{{ offer.val.price }}</td>
                 <td>
                   <input
                     type="number"
+                    v-model="offer.name"
                     min="0"
-                    :max="offer.offer_remain_amount"
+                    :max="offer.val.sum_amount"
                     step="1000"
                     class="w-full form-control" />
                 </td>
@@ -54,7 +51,7 @@
         </div>
       </div>
 
-      <div v-if="offers.length > 0" class="flex w-full mt-4 sm:w-auto sm:mt-0">
+      <div v-show="offers.length > 0" @click="onclickBid" class="flex w-full mt-4 sm:w-auto sm:mt-0">
         <button class="mx-auto shadow-md btn btn-primary">ประมูลขายทุเรียน</button>
       </div>
     </div>
@@ -107,13 +104,60 @@ export default {
         })
         .then(res => {
           let responseOffer = res.data
-          this.offers = responseOffer
-          console.log(responseOffer)
+          responseOffer.forEach(el => {
+            this.offers.push({ name: '', val: el })
+          })
+          console.log(this.offers)
         })
     }
-    // get data from db
+  },
+  methods: {
+    onclickBid() {
+      console.log(this.offers)
+      let insertsell = []
+      this.offers.forEach(el => {
+        if (el.name != '') {
+          var data = {
+            gene_id: el.val.gene_id,
+            torn_id: el.val.torn_id,
+            grade_id: el.val.grade_id,
+            location_id: el.val.location_id,
+            bid_price: el.val.price,
+            amount: el.val.sum_amount,
+            bid_amount: el.name
+          }
+          insertsell.push(data)
+        }
+      })
+      let submitdata = {
+        userid: JSON.parse(localStorage.getItem('user'))['user'].id,
+        selldata: insertsell
+      }
 
-    // set value to data
+      http.post('bid-sell', submitdata).then(res => {
+        console.log(res.data)
+        this.offers.forEach(el => {
+          el.name = ''
+        })
+        const Toast = this.$swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 1000,
+          timerProgressBar: true,
+          didOpen: toast => {
+            toast.addEventListener('mouseenter', this.$swal.stopTimer)
+            toast.addEventListener('mouseleave', this.$swal.resumeTimer)
+          }
+        })
+
+        Toast.fire({
+          icon: 'success',
+          title: 'ประมูลการขายเรียบร้อย'
+        })
+        // this.$router.go(-1)
+      })
+    }
   }
 }
 </script>

@@ -6,7 +6,10 @@
         <!-- BEGIN: Login Info -->
         <div class="flex-col hidden min-h-screen xl:flex">
           <router-link to="/" class="flex items-center pt-5 -intro-x">
-            <img alt="Icewall Tailwind HTML Admin Template" class="w-6" :src="require(`@/assets/images/logo.svg`)" />
+            <img
+              alt="Icewall Tailwind HTML Admin Template"
+              class="w-12"
+              :src="require(`@/assets/images/durian-logo.svg`)" />
             <span class="ml-3 text-lg text-white">Du<span class="font-medium">rian online</span></span>
           </router-link>
           <div class="my-auto">
@@ -64,7 +67,7 @@
               <router-link to="/register">สมัครสมาชิกใหม่</router-link>
             </div>
             <div class="flex mt-4 text-xs text-theme-20 intro-x dark:text-gray-600 sm:text-sm">
-              <router-link to="#">ฉันลืมรหัสผ่าน</router-link>
+              <router-link to="/">กลับสู่หน้าหลัก</router-link>
             </div>
 
             <div class="mt-10 text-center text-gray-700 intro-x xl:mt-24 dark:text-gray-600 xl:text-left">
