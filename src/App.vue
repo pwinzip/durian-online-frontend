@@ -3,15 +3,15 @@
 </template>
 
 <script>
-let brand = " | Durain Online";
+let brand = ' | ' + process.env.VUE_APP_TITLE
 
 export default {
-  name: "App",
+  name: 'App',
 
   watch: {
     $route(to) {
-      document.title = to.meta.title + brand;
+      document.title = to.meta.title + brand
     }
   }
-};
+}
 </script>

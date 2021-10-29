@@ -110,8 +110,8 @@ export default {
     }
   },
   mounted() {
-    let userid = JSON.parse(localStorage.getItem('user'))['user'].id
-    http.get('user-offer-buy/' + userid).then(res => {
+    // let userid = JSON.parse(localStorage.getItem('user'))['user'].id
+    http.get('user-offer-buy').then(res => {
       let responseData = res.data
       this.inProgress = responseData.inprogress
       this.matched = responseData.matched
