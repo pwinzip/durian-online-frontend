@@ -51,7 +51,7 @@
         <div class="w-full mb-4">
           <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 gradient"></div>
         </div>
-        <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
+        <!-- <div class="flex flex-col flex-grow flex-shrink w-full p-6 md:w-1/3">
           <div class="flex-1 overflow-hidden bg-white rounded-t rounded-b-none shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
               <p class="w-full px-6 text-xs text-gray-600 md:text-sm">เริ่มต้นธุรกิจ</p>
@@ -64,10 +64,10 @@
           </div>
           <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
             <div class="flex items-center justify-start">
-              <!-- <button
+              <button
                 class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105">
                 Action
-              </button> -->
+              </button>
             </div>
           </div>
         </div>
@@ -84,10 +84,10 @@
           </div>
           <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
             <div class="flex items-center justify-center">
-              <!-- <button
+              <button
                 class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105">
                 Action
-              </button> -->
+              </button>
             </div>
           </div>
         </div>
@@ -104,13 +104,13 @@
           </div>
           <div class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow">
             <div class="flex items-center justify-end">
-              <!-- <button
+              <button
                 class="px-8 py-4 mx-auto my-6 font-bold text-white transition duration-300 ease-in-out transform rounded-full shadow-lg lg:mx-0 hover:underline gradient focus:outline-none focus:shadow-outline hover:scale-105">
                 Action
-              </button> -->
+              </button>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>

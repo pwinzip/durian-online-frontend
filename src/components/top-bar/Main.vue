@@ -199,6 +199,7 @@
 <script>
 // import { defineComponent, ref } from 'vue'
 import { defineComponent } from 'vue'
+import http from '@/services/BackendService'
 
 export default defineComponent({
   data() {
@@ -228,8 +229,10 @@ export default defineComponent({
     onclickLogout() {
       localStorage.removeItem('user')
       //   this.$router.push('/login')
+      http.post('logout').then(res => {
+        console.log(res.data)
+      })
       this.$router.push({ name: 'Login' })
-      //   window.location.href = '/login'
     }
   }
 })

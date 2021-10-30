@@ -34,11 +34,11 @@ const routes = [
         path: "",
         name: "Main",
         component: Home,
+        meta: {
+          title: "หน้าแรก",
+        },
       },
     ],
-    meta: {
-      title: "หน้าแรก",
-    },
   },
   {
     path: "/login",
